@@ -13,7 +13,6 @@
 terraform-azure-container-app/
 ├── tf-env
 │   └── dev
-│       ├── demo.txt
 │       └── main.tf
 ├── tf-main
 │   ├── container_app.tf
