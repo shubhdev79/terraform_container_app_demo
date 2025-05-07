@@ -6,19 +6,25 @@
 - Ensure you have access/permissions to create resources in Azure for your subscription
 
 
+
+## Directory Structure
+
+```plaintext
 terraform-azure-container-app/
 ├── tf-env
-│   └── dev
-│       ├── demo.txt
-│       └── main.tf
+│   └── dev
+│       ├── demo.txt
+│       └── main.tf
 ├── tf-main
-│   ├── container_app.tf
-│   └── variables.tf
+│   ├── container_app.tf
+│   └── variables.tf
 └── tf-modules
     └── container_app
         ├── container.tf
         ├── outputs.tf
         └── variables.tf
+
+```
 
 ## Deployment Steps
 
@@ -65,13 +71,3 @@ terraform-azure-container-app/
     ```
     container_app_url = "https://example-containerapp.<region>.azurecontainerapps.io"
     ```
-
-Feel free to customize the variables and container image as needed for your use case.
-</content>
-</create_file>
-
-<attempt_completion>
-✅ A README.md file reflecting your project directory structure and containing prerequisites, setup instructions, deployment steps, assumptions, and expected outputs has been created.
-
-You may now proceed to use the Terraform configurations, and the README will guide you on setup and deployment. Let me know if you want help with anything else!
-</attempt_completion>
