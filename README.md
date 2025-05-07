@@ -43,13 +43,13 @@ terraform-azure-container-app/
 3. Review the execution plan:
 
     ```bash
-    terraform plan -var-file=../../tf-main/variables.tf
+    terraform plan
     ```
 
 4. Apply the configuration:
 
     ```bash
-    terraform apply -var-file=../../tf-main/variables.tf
+    terraform apply
     ```
 
 5. After successful apply, note the output for the public URL of the Container App.
