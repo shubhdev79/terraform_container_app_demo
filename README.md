@@ -1,9 +1,9 @@
-Prerequisites and setup instructions :
-1. Azure Account
-2. Terraform
-3. AZ CLI
+## Prerequisites and Setup Instructions
 
-FLOW AND SETUP :
+- Install [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli) (version 1.0 or later)
+- Install and login to [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+- Run `az login` to authenticate with your Azure subscription
+- Ensure you have access/permissions to create resources in Azure for your subscription
 
 
 terraform-azure-container-app/
@@ -19,14 +19,6 @@ terraform-azure-container-app/
         ├── container.tf
         ├── outputs.tf
         └── variables.tf
-
-
-## Prerequisites and Setup Instructions
-
-- Install [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli) (version 1.0 or later)
-- Install and login to [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
-- Run `az login` to authenticate with your Azure subscription
-- Ensure you have access/permissions to create resources in Azure for your subscription
 
 ## Deployment Steps
 
