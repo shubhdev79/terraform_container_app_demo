@@ -17,13 +17,13 @@ terraform {
 #  }
 
   backend "local" {
-    path = "/Users/shubham/Documents/Blend360/terraform.tfstate"
+    path = "/path_to.../terraform.tfstate"
   }
 }
 
 provider "azurerm" {
   features {}
-  subscription_id         = "59ae5a64-8838-4d9b-8af9-9c450625f7cd"
+  subscription_id         = "Your_account_subscription_id"
 }
 
 locals {
