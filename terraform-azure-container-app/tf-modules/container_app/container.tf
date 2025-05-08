@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "rg-container_app" {
   name     = local.resource_group_name
   location = local.location
   lifecycle {
-     ignore_changes = [tags]   # We can revert this based on requirement
+     ignore_changes = [tags]   # We can revert this based on the requirement
   }
 }
 
@@ -16,7 +16,7 @@ resource "azurerm_log_analytics_workspace" "demo" {
   name                = "demo-workspace-${var.env}-${var.az_region}-1"
   location            = azurerm_resource_group.rg-container_app.location
   resource_group_name = azurerm_resource_group.rg-container_app.name
- #sku                 = "PerGB2018"
+ #sku                 = "PerGB2018"  # It takes the default when we dont specify as its OPTIONAL PARAMETER in TF.
   retention_in_days   = 30
 }
 
@@ -32,7 +32,7 @@ resource "azurerm_container_app" "demo_app" {
   name                         = "blend-containerapp-${var.env}-${var.az_region}-1"
   resource_group_name          = azurerm_resource_group.rg-container_app.name
   container_app_environment_id = azurerm_container_app_environment.demo_container_app.id
-  revision_mode                = "Single"
+  revision_mode                = "Single"  
 
   ingress {
     traffic_weight {
