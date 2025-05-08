@@ -30,7 +30,10 @@ locals {
  env = "dev" # Like this we can have different folders and have different envs
 }
 
-module "main" {
+# This module will call the tf-main and then so on..
+# You can have multiple variable define here to override based on the different envs requirements.
+
+module "main" {           
 
 az_region                 = "uksouth"
 env                       = local.env
