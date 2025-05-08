@@ -37,7 +37,7 @@ module "main" {
 
 az_region                 = "uksouth"
 env                       = local.env
-app_required              = true
+app_required              = true                  # This variable is to set if we need the app or not.
 source                    = "../../tf-main"
 
 }
