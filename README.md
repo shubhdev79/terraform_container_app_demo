@@ -82,5 +82,6 @@ terraform-azure-container-app/
 
     ```
     container_app_url = "https://example-containerapp.<region>.azurecontainerapps.io"
+                        "https://blend-containerapp-dev-uksouth-1.whitesmoke-dd940038.uksouth.azurecontainerapps.io" # Created
     ```
 - TF PLAN OUTPUT https://github.com/shubhdev79/terraform_container_app_demo/blob/main/terraform-azure-container-app/tf-env/dev/app_plan_output.txt
