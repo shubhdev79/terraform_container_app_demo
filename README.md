@@ -10,16 +10,33 @@
 ## Directory Structure
 
 ```plaintext
-
-
+   └── terraform-azure-container-app
+       ├── tf-main
+       │   ├── main.tf
+       │   ├── output.txt
+       │   ├── outputs.tf
+       │   └── variables.tf
+       └── tf-modules
+           ├── container-app
+           │   ├── main.tf
+           │   └── variables.tf
+           ├── container-app-environment
+           │   ├── main.tf
+           │   └── variables.tf
+           ├── log-analytics
+           │   ├── main.tf
+           │   └── variables.tf
+           └── resource-group
+               ├── main.tf
+               └── variables.tf
 ```
 
 ## Deployment Steps
 
-1. Navigate to your environment directory, e.g. `tf-env/dev`:
+1. Navigate to your environment directory, e.g. `tf-main`:
 
     ```bash
-    cd tf-env/dev
+    cd tf-main
     ```
 
 2. Initialize Terraform to download required providers and modules:
@@ -51,7 +68,7 @@
 ## Assumptions / Requirements
 
 - Azure CLI is installed and user is logged in (`az login`)
-- Terraform modules are referenced correctly in your environment `main.tf` (`tf-env/dev/main.tf`) — adjust paths as needed based on your usage
+- Terraform modules are referenced correctly in your environment `main.tf` (`tf-main/main.tf`) — adjust paths as needed based on your usage
 - You have permission to create resource groups, Log Analytics workspaces, container app environments, and container apps in your Azure subscription
 - The container image used is publicly accessible (default: `nginx:latest`)
 - State files and sensitive files should be managed securely (e.g., using remote state or ignoring local state files)
@@ -71,6 +88,6 @@
 
     ```
     container_app_url = "https://example-containerapp.<region>.azurecontainerapps.io"
-                        "https://blend-containerapp-dev-uksouth-1.whitesmoke-dd940038.uksouth.azurecontainerapps.io" # Created
+                        
     ```
-- TF PLAN OUTPUT https://github.com/shubhdev79/terraform_container_app_demo/blob/main/terraform-azure-container-app/tf-env/dev/app_plan_output.txt
+- TF PLAN OUTPUT 
