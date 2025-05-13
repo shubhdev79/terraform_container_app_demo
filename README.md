@@ -10,18 +10,7 @@
 ## Directory Structure
 
 ```plaintext
-terraform-azure-container-app/
-├── tf-env
-│   └── dev
-│       └── main.tf
-├── tf-main
-│   ├── container_app.tf
-│   └── variables.tf
-└── tf-modules
-    └── container_app
-        ├── container.tf
-        ├── outputs.tf
-        └── variables.tf
+
 
 ```
 
