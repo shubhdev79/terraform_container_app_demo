@@ -5,8 +5,8 @@ plan. Resource actions are indicated with the following symbols:
 
 Terraform will perform the following actions:
 
-  # module.main.module.container_app[0].azurerm_container_app.demo_app will be created
-  + resource "azurerm_container_app" "demo_app" {
+  # module.container_app.azurerm_container_app.container_app will be created
+  + resource "azurerm_container_app" "container_app" {
       + container_app_environment_id  = (known after apply)
       + custom_domain_verification_id = (sensitive value)
       + id                            = (known after apply)
@@ -48,7 +48,7 @@ Terraform will perform the following actions:
         }
     }
 
-  # module.main.module.container_app[0].azurerm_container_app_environment.demo_container_app will be created
+  # module.container_app_environment.azurerm_container_app_environment.demo_container_app will be created
   + resource "azurerm_container_app_environment" "demo_container_app" {
       + custom_domain_verification_id    = (known after apply)
       + default_domain                   = (known after apply)
@@ -66,8 +66,8 @@ Terraform will perform the following actions:
       + zone_redundancy_enabled          = false
     }
 
-  # module.main.module.container_app[0].azurerm_log_analytics_workspace.demo will be created
-  + resource "azurerm_log_analytics_workspace" "demo" {
+  # module.log_analytics.azurerm_log_analytics_workspace.log_workspace will be created
+  + resource "azurerm_log_analytics_workspace" "log_workspace" {
       + allow_resource_only_permissions = true
       + daily_quota_gb                  = -1
       + id                              = (known after apply)
@@ -84,14 +84,17 @@ Terraform will perform the following actions:
       + workspace_id                    = (known after apply)
     }
 
-  # module.main.module.container_app[0].azurerm_resource_group.rg-container_app will be created
-  + resource "azurerm_resource_group" "rg-container_app" {
+  # module.resource_group.azurerm_resource_group.rg-container_app-rg will be created
+  + resource "azurerm_resource_group" "rg-container_app-rg" {
       + id       = (known after apply)
       + location = "uksouth"
       + name     = "container_app-dev-uksouth-1"
     }
 
 Plan: 4 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + container_app_url = (known after apply)
 
 ─────────────────────────────────────────────────────────────────────────────
 
