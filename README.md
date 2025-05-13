@@ -90,4 +90,4 @@
     container_app_url = "https://example-containerapp.<region>.azurecontainerapps.io"
                         
     ```
-- TF PLAN OUTPUT 
+- TF PLAN OUTPUT https://github.com/shubhdev79/terraform_container_app_demo/blob/main/terraform-azure-container-app/tf-main/output.txt
